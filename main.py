@@ -56,6 +56,7 @@ class MyApp(MDApp):
             index(name='index'),
             login(name='login'),
             selamat(name='selamat'),
+            home(name='home'),
         ]
         for i in screens:
             self.wm.add_widget(i)
