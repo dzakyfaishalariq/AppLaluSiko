@@ -1,0 +1,82 @@
+<login>:
+    MDFloatLayout:
+        # warna putih bacground
+        md_bg_color: [1, 1, 1, 1]
+    #image
+    Image:
+        source: 'images/gambar3.png'
+        size_hint: 300, 400
+        pos_hint: {'center_x': .5, 'center_y': .8}
+        # size_hint: 0.8, 0.1
+    #label
+    MDLabel:
+        text: 'Selamat Datang'
+        font_style: 'H5'
+        halign: 'left'
+        pos_hint: {'center_x': .5, 'center_y': .55}
+        theme_text_color: 'Custom'
+        text_color: 0, 0, 0, 1
+        size_hint: 0.8, 0.1
+    MDLabel:
+        text: 'Log in dibawah untuk akses akun mu'
+        font_style: 'H6'
+        font_size: 15
+        halign: 'left'
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        theme_text_color: 'Custom'
+        size_hint: 0.8, 0.1
+        text_color: 0.5, 0.5, 0.5, 1
+    MDTextField:
+        hint_text: 'Masukan Email'
+        type: 'email'
+        pos_hint: {'center_x': .5, 'center_y': .4}
+        border: 0, 0, 0, 0
+        size_hint: 0.8, 0.1
+    MDTextField:
+        hint_text: 'Masukan Password'
+        type: 'password'
+        #ubah karakter tulisan passwod dengan *
+        password: True
+        pos_hint: {'center_x': .5, 'center_y': .3}
+        border: 0, 0, 0, 0
+        size_hint: 0.8, 0.1
+    #button Login
+    MDRaisedButton:
+        text: 'Login'
+        pos_hint: {'center_x': .5, 'center_y': .2}
+        size_hint: 0.8, 0.06
+        size: 300, 50
+        on_release: app.root.current = 'home'
+    MDRectangleFlatIconButton:
+        icon: "google"
+        text: "Daftar via Google"
+        pos_hint: {'center_x': .5, 'center_y': .1}
+        theme_text_color: "Custom"
+        text_color: "black"
+        size_hint: .8, .06
+        line_color: "black"
+        theme_icon_color: "Custom"
+        icon_color: "orange"
+        #hubungkan dengan method login_google
+        on_press: app.login_google()
+    MDLabel:
+        text: 'Sudah punya akun?'
+        halign: 'center'
+        pos_hint: {'center_x': .5, 'center_y': .05}
+        font_style: 'Body1'
+        theme_text_color: 'Custom'
+        #ukuran font 15
+        font_size: 12
+        #warna text abu abu cerah
+        text_color: 0.5, 0.5, 0.5, 1
+    #link ke halaman login
+    MDFlatButton:
+        text: 'Masuk'
+        pos_hint: {'center_x': .5, 'center_y': .014}
+        size_hint: .8, .06
+        font_size: 12
+        size: 300, 50
+        #warna text biru
+        text_color: 0, 0, 0.5, 1
+        #hubungkan dengan method login_google
+        on_press: root.manager.current = 'login'

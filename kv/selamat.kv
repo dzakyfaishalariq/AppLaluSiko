@@ -1,0 +1,80 @@
+<selamat>:
+    MDFloatLayout:
+        # warna putih bacground
+        md_bg_color: [1, 1, 1, 1]
+    # tambahkan gambar ke dalam canvas
+    Image:
+        source: 'images/gambar2.png'
+        size_hint: None, None
+        size: 300, 500
+        pos_hint: {'center_x': .5, 'center_y': .7}
+    #buat label
+    MDLabel:
+        text: 'Selamat datang di lalusiko'
+        halign: 'center'
+        pos_hint: {'center_x': .5, 'center_y': .4}
+        font_style: 'H5'
+        theme_text_color: 'Custom'
+        #ukuran font 15
+        font_size: 15
+        text_color: 0, 0, 0, 1
+    #buat paragraf dengan text abu abu
+    MDLabel:
+        text: 'Aplikasi ini dibuat untuk memudahkan anda dalam mencari informasi tentang tempat wisata di Indonesia'
+        halign: 'center'
+        pos_hint: {'center_x': .5, 'center_y': .34}
+        font_style: 'Body1'
+        size_hint: 0.8, 0.1
+        theme_text_color: 'Custom'
+        #ukuran font 15
+        font_size: 12
+        #warna text abu abu cerah
+        text_color: 0.5, 0.5, 0.5, 1
+    #tombol buat akun baru dengan lebar 300 dan tinggi 50
+    MDRaisedButton:
+        text: 'Buat akun baru'
+        pos_hint: {'center_x': .5, 'center_y': .25}
+        size_hint: .8, .06
+        size: 300, 50
+        #warna tombol biru
+        md_bg_color: 0, 0, 0.5, 1
+        #warna text putih
+        text_color: 1, 1, 1, 1
+        #warna text ketika di tekan
+        on_press: root.manager.current = 'login'
+
+    #membuat tombol dengan icon google persegi panjang berserta tulisan "masuk dengan google"
+    MDRectangleFlatIconButton:
+        icon: "google"
+        text: "Daftar via Google"
+        pos_hint: {'center_x': .5, 'center_y': .15}
+        theme_text_color: "Custom"
+        text_color: "black"
+        size_hint: .8, .06
+        line_color: "black"
+        theme_icon_color: "Custom"
+        icon_color: "orange"
+        #hubungkan dengan method login_google
+        on_press: app.login_google()
+    
+    #label
+    MDLabel:
+        text: 'Sudah punya akun?'
+        halign: 'center'
+        pos_hint: {'center_x': .5, 'center_y': .1}
+        font_style: 'Body1'
+        theme_text_color: 'Custom'
+        #ukuran font 15
+        font_size: 12
+        #warna text abu abu cerah
+        text_color: 0.5, 0.5, 0.5, 1
+    #link ke halaman login
+    MDFlatButton:
+        text: 'Masuk'
+        pos_hint: {'center_x': .5, 'center_y': .05}
+        size_hint: .8, .06
+        size: 300, 50
+        #warna text biru
+        text_color: 0, 0, 0.5, 1
+        #hubungkan dengan method login_google
+        on_press: root.manager.current = 'login'
