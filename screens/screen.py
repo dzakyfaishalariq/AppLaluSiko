@@ -6,5 +6,5 @@ from screens.infoBencana import infoBencana
 from screens.infoCuaca import infoCuaca
 from screens.infoBantuan import infoBantuan
 from screens.donasi import donasi
-from screens.info
+from screens.infoOrangIlang import infoOrangIlang
 
