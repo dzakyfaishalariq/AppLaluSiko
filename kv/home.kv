@@ -37,6 +37,10 @@
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
+                    on_press: 
+                        root.manager.current = 'infoBencana'
+                        root.manager.transition.direction = 'left'
+                    
                 MDLabel:
                     text: "Info Bencana"
                     pos_hint: {'center_x': .5, 'center_y': .7}
@@ -44,7 +48,7 @@
                     text_color: 0, 0, 0, 1
                     font_style: "Caption"
                     halign: "center"
-                    font_size:7
+                    font_size:10
             #===========
             MDCard:
                 orientation: "vertical"
@@ -58,14 +62,17 @@
                 md_bg_color: 1, 1, 1, 1
                 #tampilkan icon di card dan keterangan di bawah
                 MDIconButton:
-                    #icon bencana alam
-                    icon: "weather-lightning"
+                    #icon cuaca
+                    icon: "weather-cloudy"
                     pos_hint: {'center_x': .5, 'center_y': .8}
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
+                    on_press: 
+                        root.manager.current = 'infoCuaca'
+                        root.manager.transition.direction = 'left'
                 MDLabel:
-                    text: "Info Bencana"
+                    text: "Info Cuaca"
                     pos_hint: {'center_x': .5, 'center_y': .7}
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
@@ -85,14 +92,17 @@
                 md_bg_color: 1, 1, 1, 1
                 #tampilkan icon di card dan keterangan di bawah
                 MDIconButton:
-                    #icon bencana alam
-                    icon: "weather-lightning"
+                    #icon info Bantuan
+                    icon: "information"
                     pos_hint: {'center_x': .5, 'center_y': .8}
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
+                    on_press: 
+                        root.manager.current = 'infoBantuan'
+                        root.manager.transition.direction = 'left'
                 MDLabel:
-                    text: "Info Bencana"
+                    text: "Info Bantuan"
                     pos_hint: {'center_x': .5, 'center_y': .7}
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
@@ -112,14 +122,14 @@
                 md_bg_color: 1, 1, 1, 1
                 #tampilkan icon di card dan keterangan di bawah
                 MDIconButton:
-                    #icon bencana alam
-                    icon: "weather-lightning"
+                    #icon jadwal harian
+                    icon: "calendar"
                     pos_hint: {'center_x': .5, 'center_y': .8}
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
                 MDLabel:
-                    text: "Info Bencana"
+                    text: "jadwal Harian"
                     pos_hint: {'center_x': .5, 'center_y': .7}
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
@@ -139,14 +149,17 @@
                 md_bg_color: 1, 1, 1, 1
                 #tampilkan icon di card dan keterangan di bawah
                 MDIconButton:
-                    #icon bencana alam
-                    icon: "weather-lightning"
+                    #icon Donasi
+                    icon: "currency-usd"
                     pos_hint: {'center_x': .5, 'center_y': .8}
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
+                    on_press: 
+                        root.manager.current = 'donasi'
+                        root.manager.transition.direction = 'left'
                 MDLabel:
-                    text: "Info Bencana"
+                    text: "Donasi"
                     pos_hint: {'center_x': .5, 'center_y': .7}
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
@@ -166,14 +179,14 @@
                 md_bg_color: 1, 1, 1, 1
                 #tampilkan icon di card dan keterangan di bawah
                 MDIconButton:
-                    #icon bencana alam
-                    icon: "weather-lightning"
+                    # icon orang dicari
+                    icon: "account-search"
                     pos_hint: {'center_x': .5, 'center_y': .8}
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
                 MDLabel:
-                    text: "Info Bencana"
+                    text: "Orang Dicari"
                     pos_hint: {'center_x': .5, 'center_y': .7}
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
@@ -193,14 +206,14 @@
                 md_bg_color: 1, 1, 1, 1
                 #tampilkan icon di card dan keterangan di bawah
                 MDIconButton:
-                    #icon bencana alam
-                    icon: "weather-lightning"
+                    #icon berita terkini
+                    icon: "newspaper"
                     pos_hint: {'center_x': .5, 'center_y': .8}
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
                 MDLabel:
-                    text: "Info Bencana"
+                    text: "Berita Terkini"
                     pos_hint: {'center_x': .5, 'center_y': .7}
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
@@ -212,28 +225,29 @@
                 halign: 'center'
         MDBottomNavigationItem:
             name: 'screen 2'
-            text: 'Twitter'
-            icon: 'twitter'
-            badge_icon: "numeric-5"
+            text: 'Bookmark'
+            #icon Bookmarks
+            icon: 'bookmark'
+            # badge_icon: "numeric-100"
 
             MDLabel:
-                text: 'Twitter'
+                # text: ''
                 halign: 'center'
 
         MDBottomNavigationItem:
             name: 'screen 3'
-            text: 'LinkedIN'
-            icon: 'linkedin'
-
+            text: 'Notification'
+            #icon Notifications
+            icon: 'bell'
             MDLabel:
-                text: 'LinkedIN'
+                # text: 'LinkedIN'
                 halign: 'center'
         
         MDBottomNavigationItem:
             name: 'screen 3'
-            text: 'LinkedIN'
-            icon: 'linkedin'
+            text: 'Profile'
+            icon: 'account'
 
             MDLabel:
-                text: 'LinkedIN'
+                # text: 'LinkedIN'
                 halign: 'center'

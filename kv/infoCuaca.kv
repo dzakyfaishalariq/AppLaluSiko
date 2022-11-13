@@ -1,0 +1,57 @@
+<infoCuaca>:
+    MDFloatLayout:
+        md_bg_color:[1,1,1,1]
+    MDBottomNavigation:
+        #panel_color: "#eeeaea"
+        selected_color_background: "orange"
+        text_color_active: "lightgrey"
+
+        MDBottomNavigationItem:
+            #icon home
+            icon: "home"
+            text: "Home"
+            Image:
+                source: 'images/gambar5.png'
+                size_hint: None, None
+                size: 300, 700
+                pos_hint: {'center_x': .5, 'center_y': .5}
+            #buat button icon kembali ke kiri
+            MDIconButton:
+                icon: "arrow-left"
+                
+                pos_hint: {'center_x': .5, 'center_y': .1}
+                user_font_size: "50sp"
+                on_release: 
+                    root.manager.current = 'home'
+                    root.manager.transition.direction = 'right'
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+            
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Bookmark'
+            #icon Bookmarks
+            icon: 'bookmark'
+            # badge_icon: "numeric-100"
+
+            MDLabel:
+                # text: ''
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Notification'
+            #icon Notifications
+            icon: 'bell'
+            MDLabel:
+                # text: 'LinkedIN'
+                halign: 'center'
+        
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'Profile'
+            icon: 'account'
+
+            MDLabel:
+                # text: 'LinkedIN'
+                halign: 'center'
