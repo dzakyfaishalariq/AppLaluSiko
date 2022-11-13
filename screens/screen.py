@@ -7,4 +7,6 @@ from screens.infoCuaca import infoCuaca
 from screens.infoBantuan import infoBantuan
 from screens.donasi import donasi
 from screens.infoOrangIlang import infoOrangIlang
+from screens.beritaTerkini import beritaTerkini
+from screens.jadwalHarian import jadwalHarian
 

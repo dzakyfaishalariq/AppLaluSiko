@@ -51,6 +51,8 @@ class MyApp(MDApp):
         self.wm = WindowManager()
         # Buat title aplikasi kanvas
         self.title = "LaluSiko"
+        # logo aplikasi kanvas
+        self.icon = "images/Logo.png"
         # router
         screens = [
             index(name='index'),
@@ -61,6 +63,9 @@ class MyApp(MDApp):
             infoCuaca(name='infoCuaca'),
             infoBantuan(name='infoBantuan'),
             donasi(name='donasi'),
+            infoOrangIlang(name='infoOrangIlang'),
+            beritaTerkini(name='beritaTerkini'),
+            jadwalHarian(name='jadwalHarian'),
         ]
         for i in screens:
             self.wm.add_widget(i)

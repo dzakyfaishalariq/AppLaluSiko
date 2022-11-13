@@ -128,6 +128,9 @@
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
+                    on_press: 
+                        root.manager.current = 'jadwalHarian'
+                        root.manager.transition.direction = 'left'
                 MDLabel:
                     text: "jadwal Harian"
                     pos_hint: {'center_x': .5, 'center_y': .7}
@@ -185,6 +188,9 @@
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
+                    on_release: 
+                        root.manager.current = 'infoOrangIlang'
+                        root.manager.transition.direction = 'left'
                 MDLabel:
                     text: "Orang Dicari"
                     pos_hint: {'center_x': .5, 'center_y': .7}
@@ -212,6 +218,9 @@
                     user_font_size: "50sp"
                     theme_text_color: "Custom"
                     text_color: 0, 0, 0, 1
+                    on_release: 
+                        root.manager.current = 'beritaTerkini'
+                        root.manager.transition.direction = 'left'
                 MDLabel:
                     text: "Berita Terkini"
                     pos_hint: {'center_x': .5, 'center_y': .7}
@@ -229,7 +238,11 @@
             #icon Bookmarks
             icon: 'bookmark'
             # badge_icon: "numeric-100"
-
+            Image:
+                source: 'images/gambar11.png'
+                size_hint: None, None
+                size: 300, 700
+                pos_hint: {'center_x': .5, 'center_y': .5}
             MDLabel:
                 # text: ''
                 halign: 'center'
@@ -239,15 +252,24 @@
             text: 'Notification'
             #icon Notifications
             icon: 'bell'
+            Image:
+                source: 'images/gambar12.png'
+                size_hint: None, None
+                size: 300, 700
+                pos_hint: {'center_x': .5, 'center_y': .5}
             MDLabel:
                 # text: 'LinkedIN'
                 halign: 'center'
         
         MDBottomNavigationItem:
-            name: 'screen 3'
+            name: 'screen 4'
             text: 'Profile'
             icon: 'account'
-
+            Image:
+                source: 'images/gambar13.png'
+                size_hint: None, None
+                size: 300, 700
+                pos_hint: {'center_x': .5, 'center_y': .5}
             MDLabel:
                 # text: 'LinkedIN'
                 halign: 'center'
