@@ -1,10 +1,10 @@
 # AppLaluSiko
 
-Aplikasi Lalu siko android for python
+Aplikasi Lalu siko android for python dan android Studio
 <br>
 
 <hr>
-dibuat dari <a href="https://www.python.org/"> Python </a>
+dibuat dari <a href="https://www.python.org/"> Python</a> dan Android Studio
 <br>
 Cara Menjalankan Aplikasi:
 <br>
